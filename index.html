@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.5.1.min.js">\x3C/script>')</script>
+	</head>
+
+	<body>
+		<div id="container">
+			<button id="boton">Button</button>
+			<!--JQUERY SCRIPT -->
+			<script>
+				$(document).ready(function() {
+					$('#boton').click(function(){
+						$('#boton').toggleClass('highlight');
+						$('#box').animate({
+							height: 'toggle'
+						}, 300);
+					});
+				});
+			</script>
+
+			<div id="box" style="display: none;">
+				<p>Este es un truco de jQuery. En el próximo tutorial pondremos ifnromación extraída de una base de datos. Wow!</p>
+			</div>
+		</div>
+	</body>
+
+</html>
